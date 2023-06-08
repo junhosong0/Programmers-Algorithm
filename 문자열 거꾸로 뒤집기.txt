@@ -1,0 +1,23 @@
+문제
+문자열을 거꾸로 뒤집어 출력하세요.
+
+string = "PYTHON"
+
+실행 예: NOHTYP
+
+
+
+나의 코드:
+string = "PYTHON"
+
+string[::-1]
+
+or 
+
+c= ''.join(reversed(list(string)))
+c
+
+or
+
+b = ''.join(reversed(string))
+b

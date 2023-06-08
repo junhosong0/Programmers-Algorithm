@@ -1,0 +1,38 @@
+문제 설명
+
+한 자리 정수로 이루어진 문자열 num_str이 주어질 때, 각 자리수의 합을 return하도록 solution 함수를 완성해주세요.
+
+
+
+입출력 예
+
+num_str	result
+"123456789"	45
+"1000000"	1
+
+
+
+나의 코드
+
+def solution(num_str):
+    num_list = list(num_str)
+    lst = []
+
+    for i in num_list:
+        lst.append(int(i))
+        
+    return sum(lst)
+
+
+
+리스트 컴프리헨션
+
+def solution(num_str):
+    return sum([int(i) for i in num_str])
+
+
+
+map 함수
+
+def solution(num_str):
+      return sum(map(int, list(num_str)))
