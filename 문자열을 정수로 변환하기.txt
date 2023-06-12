@@ -14,3 +14,6 @@ def solution(rny_string):
 
 배워야 할 코드:
 solution = lambda x : int(x) 
+
+def solution(n_str):
+    return int(n_str)
