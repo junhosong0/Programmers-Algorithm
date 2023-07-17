@@ -1,0 +1,36 @@
+문제 설명
+
+정수 배열 array와 정수 n이 매개변수로 주어질 때, array에 들어있는 정수 중 n과 가장 가까운 수를 return 하도록 solution 함수를 완성해주세요.
+
+
+
+입출력 예
+
+array		n	result
+[3, 10, 28]	20	28
+[10, 11, 12]	13	12
+
+
+
+나의코드
+
+def solution(array, n):
+    d_lst = []
+    s_n_lst = []
+    
+    for i in array:
+        d_lst.append(abs(n-i))
+    
+    for idx, d in enumerate(d_lst):
+        if d == min(d_lst):
+            s_n_lst.append(array[idx])
+    
+    if len(s_n_lst)>1:
+        return min(s_n_lst)
+    else:
+        return s_n_lst[0]
+
+
+배울코드
+
+solution=lambda a,n:sorted(a,key=lambda x:(abs(x-n),x))[0]
