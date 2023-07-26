@@ -1,0 +1,43 @@
+문제 설명
+
+이진수를 의미하는 두 개의 문자열 bin1과 bin2가 매개변수로 주어질 때, 두 이진수의 합을 return하도록 solution 함수를 완성해주세요.
+
+
+
+입출력 예
+
+bin1	bin2	result
+"10"	"11"	"101"
+"1001"	"1111"	"11000"
+
+
+
+나의코드
+
+def solution(bin1, bin2):
+    int_plus = int(bin1,2) + int(bin2,2)
+    
+    return bin(int_plus)[2:]
+
+
+배울코드
+
+def solution(bin1, bin2):
+    answer = 0
+    bin1_size = len(bin1)
+    bin2_size = len(bin2)
+
+    sum = 0
+
+    for i in bin1:
+        sum += int(i) * (2 ** (bin1_size - 1))
+        bin1_size -= 1
+
+    for i in bin2:
+        sum += int(i) * (2 ** (bin2_size - 1))
+        bin2_size -= 1
+
+    answer = str(bin(sum))[2:]
+
+
+    return answer
